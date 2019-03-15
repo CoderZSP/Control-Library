@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FinishListSearchBoxView">
+            <rect key="frame" x="0.0" y="0.0" width="377" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_icon_search_selected" translatesAutoresizingMaskIntoConstraints="NO" id="5Cc-Gt-etu">
+                    <rect key="frame" x="11" y="11" width="19" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="Vh8-d8-KGq"/>
+                        <constraint firstAttribute="width" constant="19" id="dhi-Tv-hZj"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" " minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HNN-MK-Iu3">
+                    <rect key="frame" x="40" y="10.5" width="302" height="19"/>
+                    <color key="tintColor" red="0.094117647058823528" green="0.52549019607843139" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.67450980392156867" green="0.80392156862745101" blue="0.94901960784313721" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fR-cr-7J6">
+                    <rect key="frame" x="342" y="0.0" width="35" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="SHj-Wd-2rE"/>
+                    </constraints>
+                    <state key="normal" image="common_icon_search_close"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.18431372549019609" green="0.56862745098039214" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7fR-cr-7J6" firstAttribute="leading" secondItem="HNN-MK-Iu3" secondAttribute="trailing" id="7ML-eL-4Vb"/>
+                <constraint firstItem="HNN-MK-Iu3" firstAttribute="leading" secondItem="5Cc-Gt-etu" secondAttribute="trailing" constant="10" id="RMb-mC-Q3C"/>
+                <constraint firstItem="HNN-MK-Iu3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UYo-zf-wNy"/>
+                <constraint firstItem="7fR-cr-7J6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VnW-OX-3xu"/>
+                <constraint firstItem="5Cc-Gt-etu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aXd-Ez-oH4"/>
+                <constraint firstItem="5Cc-Gt-etu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="11" id="eFe-Mr-ONP"/>
+                <constraint firstAttribute="bottom" secondItem="7fR-cr-7J6" secondAttribute="bottom" id="f17-gv-wZl"/>
+                <constraint firstAttribute="trailing" secondItem="7fR-cr-7J6" secondAttribute="trailing" id="xIo-zh-a1q"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="2"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="cancelButton" destination="7fR-cr-7J6" id="OLB-ce-jXY"/>
+                <outlet property="searchTextField" destination="HNN-MK-Iu3" id="FqJ-C5-Hcx"/>
+            </connections>
+            <point key="canvasLocation" x="30.5" y="-15"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common_icon_search_close" width="18.5" height="18.5"/>
+        <image name="common_icon_search_selected" width="18.5" height="17.5"/>
+    </resources>
+</document>
